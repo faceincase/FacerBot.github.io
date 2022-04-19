@@ -6,7 +6,7 @@ FACER 2022
 
 ## Get in touch with us 🙋
 
-If you need any help, want to report a bug or new idea please join [SUPPORT SERVER] on discord.(https://discord.gg/5UK939STjX)
+If you need any help, want to report a bug or new idea please join [SUPPORT SERVER](https://discord.gg/5UK939STjX) on discord.
 
 ## We ❤️
 
