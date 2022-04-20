@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Facer | CHANGE-LOG</title>
+<link rel="icon" href="images/F.png">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/scripts.js"></script>
+
+
+    <style type="text/css">
+
+
+
+
+      a,
+      a:visited {
+        color: white;
+      }
+
+      ol,
+      ul,
+      li {
+        list-style: none;
+      }
+
+      blockquote,
+      q {
+        quotes: none;
+      }
+
+      blockquote:before,
+      blockquote:after,
+      q:before,
+      q:after {
+        content: "";
+        content: none;
+      }
+
+      caption,
+      th {
+        text-align: left;
+      }
+
+      ins {
+        text-decoration: none;
+      }
+
+      del {
+        text-decoration: line-through;
+      }
+
+      table {
+        border-collapse: collapse;
+        border-spacing: 0;
+      }
+
+      ol li {
+        list-style-type: decimal;
+      }
+
+      a,
+      strong {
+        vertical-align: initial;
+        vertical-align: auto;
+      }
+
+      /* disabled ie10+ clear button */
+      input::-ms-clear {
+        display: none;
+      }
+
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        color: rgba(0, 0, 0, 0.85);
+        font-weight: normal;
+      }
+
+      html {
+        font-size: 16px;
+      }
+
+
+      a {
+        text-decoration: none;
+      }
+
+      h3 {
+        font-size: 1rem;
+        line-height: 4.125;
+      }
+
+      ul {
+        padding: 1.875rem;
+      }
+
+      ul li {
+        padding-left: 0.625rem;
+        position: relative;
+      }
+
+      ul li:before {
+        content: "*";
+        position: absolute;
+        left: -0.375rem;
+        top: 0.375rem;
+      }
+
+      .header {
+        position: fixed;
+        z-index: 9999;
+        width: 100%;
+        top: 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+      }
+
+
+
+
+
+
+
+
+
+
+      /* Changelog */
+      .changelog-main {
+        max-width: 70rem;
+        padding: 7.5rem 0.75rem 8rem;
+        margin: 0 auto;
+        color: rgba(255,255,255, 0.84);
+        font-size: 1.25rem;
+
+      }
+
+      .changelog-main h1,
+      .changelog-main h2 {
+        color: rgba(165,184,200, 0.85);
+      }
+
+
+
+      .changelog-main h2 {
+        display: block;
+        position: relative;
+        padding: 0.2em 0;
+      }
+
+      /* Fade in */
+      .changelog-main h2::after {
+        content: 'Bye';
+        font-size: 8px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 0.1em;
+        background-color: #5cc7c6;
+        opacity: 0;
+        transition: opacity 300ms, transform 300ms;
+      }
+
+      .changelog-main h2:hover::after,
+      .changelog-main h2:focus::after {
+        content: 'Hello';
+        opacity: 1;
+        transform: translate3d(0, 0.2em, 0);
+      }
+
+
+
+
+
+      .changelog-main h1 {
+        font-size: 3rem;
+        font-weight: bold;
+        text-decoration: underline;
+      }
+
+      .divider {
+        width: 75%;
+        height: 1px;
+        background-color: rgba(4, 24, 53, 0.24);
+        margin: 2.625rem 0;
+      }
+
+      .log-wrapper {
+        /*margin: 148px 0;*/
+      }
+
+      .label-wrapper {
+        height: 1.875rem;
+        padding: 0.3125rem 0;
+        box-sizing: border-box;
+      }
+
+      .label {
+        display: inline-block;
+        height: 1.25rem;
+        line-height: 1.25rem;
+        min-width: 3.125rem;
+        margin-right: 1rem;
+        color: #666;
+        background-color: #e8e8e8;
+        border-radius: 6.25rem;
+        text-align: center;
+        vertical-align: top;
+        font-size: 0.8125rem;
+      }
+
+      .label-new {
+        color: white;
+        background-color: #ff3180;
+      }
+
+      .label-command {
+        color: white;
+        background-color: #7755d4;
+        min-width: 4.8125rem;
+      }
+
+      .label-improved {
+        color: white;
+        background-color: #617fde;
+        min-width: 4.8125rem;
+      }
+
+      .label-pro {
+        color: white;
+        background-color: #f9bf13;
+      }
+
+      .label-ultra {
+        color: white;
+        background-color: #d94130;
+      }
+
+      .log {
+        margin-top: 4rem;
+      }
+
+      .log:first-child {
+        margin-top: 3rem;
+      }
+
+      .log:last-child > li:last-child {
+        margin-bottom: 0;
+      }
+
+      .log > ul {
+        margin-bottom: 0.625rem;
+        padding: 0;
+      }
+
+      .log li {
+        margin-bottom: 1.25rem;
+        padding-left: 0;
+        line-height: 1.875rem;
+        display: flex;
+      }
+
+      .log li:before {
+        content: "";
+      }
+
+      .log li .detail-wrapper {
+        flex: 1;
+        font-size: 20px;
+      }
+
+
+      .log > h2 {
+        font-weight: bold;
+        font-size: 2rem;
+        line-height: 2.8125rem;
+        margin-bottom: 1.5rem;
+      }
+
+      body{
+        -webkit-filter: blur(0px);
+      }
+
+    </style>
+
+
+  </head>
+
+  <body>
+
+    <nav class="navbar">
+      <div class="inner-width">
+        <a></a>
+        <button class="menu-toggler">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="navbar-menu">
+          <a href="index.html">Main</a>
+          <a href="changes.html">Change log</a>
+          <a href="facer.html">Facer</a>
+          <a href="commands.html">Commands</a>
+        </div>
+      </div>
+    </nav>
+
+    <section id="home">
+
+
+    <div class="changelog-main">
+      <h1>Changelog</h1>A complete, accurate and up-to-date changelog is available on <a style="color:#06293d;" href="https://discord.gg/5UK939STjX">DISCORD!</a>.
+      <!-- <div class="divider"></div> -->
+      <div class="log-wrapper"></div>
+    </div>
+
+    <script>
+      var logArr = [
+        {
+          date: "Version 1.3.0",
+          list: [
+            {
+              label: ["Command"],
+              detail:
+                'New commands! Presenting <strong>!guess</strong> & <strong>!yordle</strong> & <strong>!games</strong>'
+            },
+            {
+              label: ["Improved"],
+              detail:
+                'Added new two global leaderboards! <strong>POINTS</strong> & <strong>YORDLEs WINS.</strong>'
+            },
+            {
+              label: ["New"],
+              detail:
+                'Game !guess is all about guessing the champions name and skill based on a picture or emotes!'
+            },
+            {
+              label: ["New"],
+              detail:
+                'Game !yordle is about guessing the name of the character in the same way as the game WORDLE, i.e. you guess the characters and show you which letters you hit.'
+            },
+            {
+              label: ["New"],
+              detail:
+                '<strong>Your idea!</strong> Based on your suggestions we added WIN-STREAK to minigames & EXTRA POINTS for currect guesstes when your win streak if high.'
+            },
+            {
+              label: ["Fixed"],
+              detail:
+                  '• Definitely fixed the MOST PLAYED WITH error.<br>• Changed display of few items (adjusted to new patch)<br>• Changed the !top icon - now its only displaying league of legends data.'
+            }
+          ]
+        },
+
+        {
+          date: "Version 1.2.0",
+          list: [
+            {
+              label: ["Improved"],
+              detail: "Changed long teammate nicknames, and added hyperlink which allows you to click on them to get their full nickname."
+            },
+            {
+              label: ["Improved"],
+              detail: "Updated Kassadin icon."
+            },
+            {
+              label: ["New"],
+              detail: "Added last activity (based on last game)"
+            },
+            {
+              label: ["New"],
+              detail: "Added how much dmg have person dealt in your team as %"
+            },
+            {
+              label: ["New"],
+              detail: "Added new second page to !all command (game summary)"
+            },
+            {
+              label: ["New"],
+              detail: "Added information if there was a AFK in team."
+            },
+            {
+              label: ["New"],
+              detail: "Added IN GAME layout to !all command."
+            },
+            {
+              label: ["New"],
+              detail: "Visual changes to: Last game, Last 20 games."
+            },
+            {
+              label: ["New"],
+              detail: "Added average stats from last 20 (now 30) games."
+            },
+            {
+              label: ["New"],
+              detail: "Added loading icon when bot need to perform longer actions."
+            },
+            {
+              label: ["New"],
+              detail: "NEW GAME LOADING SYSTEM - Games are downloaded from cloud instead of pulling from API."
+            },
+            {
+              label: ["Fix"],
+              detail: "Fixed the display of Wukong aka. Monkeyking emote."
+            }
+          ]
+        },
+        {
+          date: "Version 1.1.0",
+          list: [
+            {
+              label: ["Improved","New"],
+              detail: "Changed the name of bot to <strong>Facer</strong>."
+            },
+            {
+              label: ["Improved"],
+              detail: "Removed players from MOST PLAYED WITH when there was only 1 game played."
+            },
+            {
+              label: ["Improved"],
+              detail: "Summoner nicknames can now be entered without case-sensitive."
+            },
+            {
+              label: ["Improved"],
+              detail: "New embed for command !rotation"
+            },
+            {
+              label: ["Improved"],
+              detail: "SYNC WITH 12.4.1 PATCH"
+            },
+            {
+              label: ["Improved"],
+              detail: "Command !all now is faster by 2 seconds."
+            },
+            {
+              label: ["Improved"],
+              detail: "Adjusted the display of SUPPORT and UTILITY role."
+            },
+            {
+              label: ["New"],
+              detail: "Added preferred position into !all command at the top."
+            },
+            {
+              label: ["New"],
+              detail: "New WR system."
+            },
+            {
+              label: ["New"],
+              detail: "Added and updated Renata Glasc icon and champion list."
+            },
+            {
+              label: ["New"],
+              detail: "Added support for EUW, JAPAN, BRAZIL and RUSSIA"
+            },
+            {
+              label: ["New"],
+              detail: "Regions are now selected automatically"
+            },
+            {
+              label: ["New"],
+              detail: "Added support for EUW, JAPAN, BRAZIL and RUSSIA"
+            },
+            {
+              label: ["Fixed"],
+              detail: "• Emotes Grandmaster and Challanger<br>• VEX icon.<br>• Error when game for shorter than 60 second (customs)<br>• Fixed !all error when summoner has not played any games."
+            }
+          ]
+        },
+
+        {
+          date: "Version 0.0.0 [BETA]",
+          list: [
+            {
+              label: ["Improved"],
+              detail: "• A lot of basic basics have been improved."
+            },
+            {
+              label: ["New"],
+              detail: "• A lot of basic stuff has been added."
+            },
+            {
+              label: ["Fixed"],
+              detail:
+                "• A lot of basic bugs have been fixed."
+            }
+          ]
+        }
+      ];
+
+      var buildLogSection = function(log) {
+        var $section = document.createElement("section");
+        $section.classList.add("log");
+        var $date = buildLogTitle(log);
+        var $list = buildLogList(log);
+        $section.appendChild($date);
+        $section.appendChild($list);
+        return $section;
+      };
+
+      var buildLogTitle = function(log) {
+        var $title = document.createElement("h2");
+        var date = log.date;
+        $title.innerText = date;
+        return $title;
+      };
+
+      var buildLogList = function(log) {
+        var $ul = document.createElement("ul");
+        var list = log.list || [];
+        for (var i = 0; i < list.length; i++) {
+          var item = list[i];
+          var $li = buildLogItem(item);
+          $ul.appendChild($li);
+        }
+        return $ul;
+      };
+
+      var buildLogItem = function(item) {
+        var $li = document.createElement("li");
+        var $labels = document.createElement("div");
+        $labels.classList.add("label-wrapper");
+        var $detail = document.createElement("div");
+        $detail.classList.add("detail-wrapper");
+
+        item.label.forEach(function(label) {
+          var $label = document.createElement("span");
+          $label.classList.add("label", "label-" + label.toLowerCase());
+          $label.innerText = label;
+          $labels.appendChild($label);
+        });
+
+        $detail.innerHTML = item.detail;
+
+        $li.appendChild($labels);
+        $li.appendChild($detail);
+
+        return $li;
+      };
+
+      var sectionArr = [];
+
+      for (var i = 0; i < logArr.length; i++) {
+        var $section = buildLogSection(logArr[i]);
+        sectionArr.push($section.outerHTML);
+      }
+
+      document.querySelector(".log-wrapper").innerHTML = sectionArr.join("");
+    </script>
+
+  </section>
+  </body>
+</html>
