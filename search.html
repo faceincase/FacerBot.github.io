@@ -1,0 +1,185 @@
+
+<html lang="en">
+<title>FACER | Search</title>
+ <link rel="icon" href="images/F.png">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta content="Rioter Boter || Facer" property="og:title" />
+  <meta content="If my code works - be quiet and be happy that its still working." property="og:description" />
+  <meta content="https://rzaniok.github.io/main/" property="og:url" />
+  <meta property="og:image" content="https://rzaniok.github.io/main/yuumi.jpg">
+
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="js/scripts.js"></script>
+
+  <script src="https://kit.fontawesome.com/88725d645b.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+
+
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="inner-width">
+      <a></a>
+      <button class="menu-toggler">
+        <h6></h6>
+        <h6></h6>
+        <h6></h6>
+      </button>
+      <div class="navbar-menu">
+        <a href="index.html">Main</a>
+        <a href="changes.html">Change log</a>
+        <a href="commands.html">Commands</a>
+        <a href="search.html">Search (SOON)</a>
+        <a href="pro.html" style="color:#DCAF57;"> <i class="fas fa-crown"> </i>PRO</a>
+      </div>
+    </div>
+  </nav>
+
+<style>
+
+input[type=text]{
+  width: 250px;
+  box-sizing: border-box;
+  border: 2px solid rgba(204, 204, 204, 0);
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: rgba(38,182,172,0.5);
+  background-image: url('images/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 12px 0px 12px 40px;
+  box-shadow: 0 5px #031214;
+}
+
+::placeholder {
+  color: white;
+  opacity: 0.8;
+}
+
+
+select{
+  appearance: none;
+
+  border: none;
+  width: 150px;
+  border-radius: 4px;
+  font-size: 16px;
+  background-repeat: no-repeat;
+  padding: 10px 0px 10px 0px;
+  text-align: center;
+  background-color: rgba(38,182,172,0.5);
+  box-shadow: 0 5px #031214;
+}
+
+
+
+input[type=text] {
+  transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+  width: 350px;
+  outline: none;
+}
+
+select:focus {
+  outline: none;
+}
+
+button[type=submit] {
+  appearance:none;
+  -webkit-appearance:none;
+  padding:10px;
+  border:none;
+  background-color: #092625;
+  color:#fff;
+  font-weight:600;
+  border-radius:5px;
+  width:100px;
+  box-shadow: 0 5px #031214;
+}
+
+button[type=submit]:hover {
+  background-color: #031214
+}
+
+button[type=submit]:active {
+  background-color: #092625;
+  box-shadow: 0 5px #031214;
+  transform: translateY(4px);
+}
+
+.input-group-addon.select-input {
+  width: 20%;
+  padding: 0;
+}
+
+.input-group-addon.select-input select {
+  border: none;
+  height: 32px;
+}
+
+
+.type_slct {
+  color: rgba(255,255,255,0.7);
+}
+
+.type_slct option {
+  color: #1e293b
+}
+
+</style>
+
+
+  <div class="inner-width" style="text-align:center; padding-top:280px;width:600px;">
+
+    <h1 style="color:white;">Hi!<h1>
+    <h2 style="color:rgba(255,255,255,0.7);word-wrap: break-word;text-align:center;">Player finder not available yet, site needs new hosting to be fast and secure.</h2>
+    <br>
+    <h2 style="font-size:15px;color:rgba(255,255,255,0.7);word-wrap: break-word;">but wait!<br>We really care about your opinions what should be found on such a page, if you have an idea, throw it on discord.</h2>
+
+    <br><br>
+
+    <form action="http://localhost:8000/" autocomplete="off" action="">
+
+      <label for="nick"></label>
+      <input style="color: transparent;text-shadow: 0 0 0 rgba(255,255,255,0.8);" type="text" id="nick" name="nick" spellcheck="false" placeholder="Summoner name...">
+
+      <br><br>
+
+      <label for="region"></label>
+      <select id="region" name="region" class="type_slct">
+        <option value="eun1">EUNE</option>
+        <option value="euw1">EUW</option>
+        <option value="ru1">RUSSIA</option>
+        <option value="br">BRAZIL</option>
+        <option value="jp">JAPAN</option>
+      </select>
+
+      <br><br>
+
+      <button type="submit" value="Submit">Search</button>
+    </form>
+
+  </div>
+
+
+
+</body>
+</html>
+
+
+
+
+      </div>
+    </footer>
